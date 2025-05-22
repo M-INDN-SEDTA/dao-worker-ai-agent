@@ -16,33 +16,32 @@
 
 dao-worker-ai-agent/
 │
-├── backend/                          # Flask backend
-│   ├── app.py                        # Main Flask app
-│   ├── ai_agent.py                   # AI task handler
-│   ├── blockchain.py                 # Smart contract interaction
-│   ├── config.py                     # Environment config
-│   ├── requirements.txt              # Python dependencies
-│   ├── tasks.db                      # Optional SQLite database
-│   ├── templates/                    # Jinja HTML templates
-│   │   └── index.html
-│   └── static/                       # Static frontend files
-│       ├── css/
-│       │   └── styles.css
-│       └── js/
-│           └── task.js
+├── backend/                   # Flask Backend AI Agent
+│   ├── app.py                 # Main Flask app
+│   ├── ai_agent.py            # AI logic (summarization)
+│   ├── blockchain.py          # Simulated blockchain interaction
+│   ├── config.py              # API keys, contract address config
+│   ├── tasks.db               # SQLite DB (optional, unused now)
+│   └── requirements.txt       # Python dependencies
 │
-├── contracts/                        # Smart contracts (Solidity)
-│   ├── DAOAgent.sol                  # Solidity contract
-│   ├── deploy.js                     # Hardhat deploy script
-│   ├── hardhat.config.js             # Hardhat config
-│   └── scripts/                      # Optional script dir
+├── templates/                 # Jinja2 HTML Templates
+│   └── index.html             # Main UI
 │
-├── saved/                            # Saved task results
-│   └── task_001.json
+├── static/                    # Static frontend files
+│   ├── task.js                # JS to submit tasks via AJAX
+│   └── styles.css             # Optional styling
 │
-├── .env                              # Environment secrets
-├── README.md                         # Project instructions
-├── run.py                            # App entrypoint
+├── contracts/                 # Smart Contracts
+│   ├── DAOAgent.sol           # Solidity contract (with ProposalSummary event)
+│   ├── deploy.js              # Deployment script using Hardhat
+│   └── hardhat.config.js      # Hardhat config
+│
+├── saved/                     # Task logs folder (auto saved)
+│   └── summary_*.json         # Stored AI summaries
+│
+├── .env                       # Secret environment variables
+├── run.sh                     # Optional unified run script
+└── README.md                  # This file
 
 
 python -m venv venv
@@ -53,3 +52,5 @@ venv\Scripts\activate
 
 cd dao-worker-ai-agent
 pip install -r requirements.txt
+
+./run.sh

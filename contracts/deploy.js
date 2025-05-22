@@ -1,11 +1,17 @@
-// contracts/deploy.js
+const hre = require("hardhat");
+
 async function main() {
-    const DAOAgent = await ethers.getContractFactory("DAOAgent");
-    const daoAgent = await DAOAgent.deploy();
-    await daoAgent.deployed();
-    console.log("DAOAgent deployed to:", daoAgent.address);
+  const DAOAgent = await hre.ethers.getContractFactory("DAOAgent");
+  const daoAgent = await DAOAgent.deploy();
+
+  await daoAgent.deployed();
+
+  console.log("DAOAgent deployed to:", daoAgent.address);
 }
-main().catch((error) => {
+
+main()
+  .then(() => process.exit(0))
+  .catch(error => {
     console.error(error);
-    process.exitCode = 1;
-});
+    process.exit(1);
+  });

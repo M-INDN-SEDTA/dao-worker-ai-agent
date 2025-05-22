@@ -1,9 +1,11 @@
-// contracts/hardhat.config.js
 require("@nomiclabs/hardhat-waffle");
 
 module.exports = {
-  solidity: "0.8.0",
+  solidity: "0.8.9",
   networks: {
-    hardhat: {},
+    hardhat: {
+      chainId: 1337,
+    },
+    // Add testnet configs here if needed
   },
 };

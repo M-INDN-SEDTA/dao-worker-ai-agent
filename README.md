@@ -54,7 +54,6 @@ dao-worker-ai-agent/
 ### 1. 📦 Install Backend Dependencies
 
 ```bash
-cd backend
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
@@ -77,8 +76,8 @@ CONTRACT_ADDRESS=0xYourSmartContractAddress
 ## 🚀 Run the Application
 
 ```bash
-cd backend
-python app.py
+
+./run.sh
 ```
 
 Then open: [http://127.0.0.1:5000](http://127.0.0.1:5000)
@@ -129,10 +128,10 @@ def handle_task(prompt):
 
 ```txt
 Flask
-Flask-Cors
 python-dotenv
 openai
 web3
+requests
 ```
 
 ---
