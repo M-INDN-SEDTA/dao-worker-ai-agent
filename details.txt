@@ -1,0 +1,55 @@
+     [User]                  [Frontend]               [Backend AI Agent]            [Blockchain]
+       |                         |                          |                             |
+       |  Create Task  --------> |                          |                             |
+       |                         | ---> Show Task --------> |                             |
+       |                         |                          | --> Fetch Task ------------>|
+       |                         |                          | <-- Task Info --------------|
+       |                         |                          |                             |
+       |                         |                          | --> AI completes Task       |
+       |                         |                          | --> Submit Result --------->|
+       |                         |                          |                             |
+       |                         | <-- Task + Result ------ |                             |
+       |  View Results <-------- |                          |                             |
+       |                         |                          |                             |
+
+
+
+dao-worker-ai-agent/
+│
+├── backend/                          # Flask backend
+│   ├── app.py                        # Main Flask app
+│   ├── ai_agent.py                   # AI task handler
+│   ├── blockchain.py                 # Smart contract interaction
+│   ├── config.py                     # Environment config
+│   ├── requirements.txt              # Python dependencies
+│   ├── tasks.db                      # Optional SQLite database
+│   ├── templates/                    # Jinja HTML templates
+│   │   └── index.html
+│   └── static/                       # Static frontend files
+│       ├── css/
+│       │   └── styles.css
+│       └── js/
+│           └── task.js
+│
+├── contracts/                        # Smart contracts (Solidity)
+│   ├── DAOAgent.sol                  # Solidity contract
+│   ├── deploy.js                     # Hardhat deploy script
+│   ├── hardhat.config.js             # Hardhat config
+│   └── scripts/                      # Optional script dir
+│
+├── saved/                            # Saved task results
+│   └── task_001.json
+│
+├── .env                              # Environment secrets
+├── README.md                         # Project instructions
+├── run.py                            # App entrypoint
+
+
+python -m venv venv
+
+source venv/bin/activate
+
+venv\Scripts\activate
+
+cd dao-worker-ai-agent
+pip install -r requirements.txt

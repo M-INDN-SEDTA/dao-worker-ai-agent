@@ -1,0 +1,23 @@
+<!-- backend/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAO Worker AI Agent</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+    <div class="container mt-5">
+        <h2 class="mb-4">DAO Worker AI Agent</h2>
+        <form id="task-form">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="task-input" placeholder="Paste DAO proposal here" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Task</button>
+        </form>
+        <div id="result-area" class="mt-4"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/task.js') }}"></script>
+</body>
+</html>

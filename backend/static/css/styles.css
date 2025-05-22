@@ -1,0 +1,7 @@
+/* backend/static/css/styles.css */
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+input, button {
+    font-size: 1.1rem;
+}
