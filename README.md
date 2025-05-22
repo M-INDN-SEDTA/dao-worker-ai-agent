@@ -1,4 +1,3 @@
-````markdown
 # 🤖 DAO Worker AI Agent (Aptos x GCP Hackathon Project)
 
 A smart AI-powered agent that assists DAOs by summarizing lengthy proposals and submitting them on-chain for better transparency, faster decision-making, and efficient task handling.
@@ -174,16 +173,3 @@ Pull requests and forks are welcome. This project is part of the **Aptos x GCP H
 
 ---
 
-## 📬 Contact
-
-Have questions or suggestions?
-
-**Email:** [team@dao-ai-agent.dev](mailto:team@dao-ai-agent.dev)
-**Twitter:** [@DAOAgentAI](https://twitter.com)
-
----
-
-```
-
-Would you like this exported as a `.md` file too? Or want to auto-fill it in your actual folder with Python?
-```
